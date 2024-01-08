@@ -1,0 +1,82 @@
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #0b1416;
+  margin: 0;
+}
+
+h1,
+h3,
+p {
+  color: white;
+}
+
+div {
+  font-weight: bold;
+  font-size: large;
+}
+
+body {
+  background-color: #0b1416;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+#story-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: #1a282d;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  width: 200px;
+  height: 100px;
+}
+
+.grid-item:hover {
+  box-shadow: 0 0 10px rgb(206, 232, 130)
+}
+
+#city-story {
+  background-image: url('/static/images/city-story.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#city-story {
+  background-image: url('/static/images/city-story.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#road-story {
+  background-image: url('/static/images/road-story.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom
+}
+
+#food-story {
+  background-image: url('/static/images/food-story.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#park-story {
+  background-image: url('/static/images/park-story.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

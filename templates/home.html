@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MadLibraries</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Mad~Lib~Raries!</h1>
+  </header>
+  <hr>
+
+  <section id="story-section">
+    <h3>Choose your story!</h3>
+    <div id="story-selector">
+      <div class="grid-item" id="city-story" onclick="selectStory('Story 1')">City</div>
+      <div class="grid-item" id="park-story" onclick="selectStory('Story 2')">Park</div>
+      <div class="grid-item" id="food-story" onclick="selectStory('Story 3')">Food</div>
+      <div class="grid-item" id="road-story" onclick="selectStory('Story 4')">Roadtrip</div>
+    </div>
+  </section>
+  <hr>
+
+  <form id="set-up">
+    <p></p>
+  </form>
+
+  <div class="story-block">
+    <p>I love to {%verb%} {%plural noun%}</p>
+  </div>
+</body>
+<script src="/static/app.js"></script>
+</html>
