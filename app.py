@@ -1,5 +1,6 @@
-from flask import Flask, request, render_template
-from random import randint, choice
+from random import choice, randint
+
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 

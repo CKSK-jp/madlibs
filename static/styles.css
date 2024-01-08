@@ -7,7 +7,7 @@ header {
 }
 
 h1,
-h3,
+h2,
 p {
   color: white;
 }
@@ -41,14 +41,14 @@ section {
   color: #fff;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   padding: 10px;
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 150px;
+  border-radius: 5px;
 }
 
 .grid-item:hover {
-  box-shadow: 0 0 10px rgb(206, 232, 130)
+  box-shadow: 0 0 10px rgb(231, 250, 106)
 }
 
 #city-story {
@@ -73,6 +73,7 @@ section {
   background-image: url('/static/images/food-story.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 #park-story {
