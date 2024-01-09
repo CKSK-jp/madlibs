@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,24 +14,27 @@
   </header>
   <hr>
 
-  <section id="story-section">
+  <section id="story-section" {% if story_chosen %}style='display: none;'{% endif %}>
     <h2>Choose your Story Template!</h2>
     <div id="story-selector">
-      <div class="grid-item" id="city-story" onclick="selectStory('Story 1')">CITY</div>
-      <div class="grid-item" id="park-story" onclick="selectStory('Story 2')">THEME PARK</div>
-      <div class="grid-item" id="food-story" onclick="selectStory('Story 3')">FOOD</div>
-      <div class="grid-item" id="road-story" onclick="selectStory('Story 4')">ROADTRIP</div>
+      <div class="grid-item" id="city-story" onclick="selectStory('city')">CITY</div>
+      <div class="grid-item" id="park-story" onclick="selectStory('park')">THEME PARK</div>
+      <div class="grid-item" id="food-story" onclick="selectStory('food')">FOOD</div>
+      <div class="grid-item" id="road-story" onclick="selectStory('roadtrip')">ROADTRIP</div>
     </div>
   </section>
-  <hr>
 
-  <form id="set-up">
-    <p></p>
+  <form action="/story/{{ selected_story }}" method="post" id="set-up" {% if not story_chosen or not selected_story %}style='display: none;'{% endif %}>
+    {% for prompt in prompts %}
+      <label for="{{prompt}}">{{prompt}}:</label>
+      <input type="text" name="{{prompt}}">
+      <br>
+    {% endfor %}
+    <button type="submit">Generate Story</button>
   </form>
-
-  <div class="story-block">
-    <p>I love to {%verb%} {%plural noun%}</p>
-  </div>
+  <hr>
 </body>
+
 <script src="/static/app.js"></script>
+
 </html>
