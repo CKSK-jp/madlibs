@@ -8,11 +8,13 @@ from stories import Story
 app = Flask(__name__)
 
 
+# default landing page for user
 @app.route("/")
 def story_selection():
     return render_template("home.html")
 
 
+# handles user story selection.
 @app.route("/get_prompts/<selected_story>")
 def get_prompts(selected_story):
     story_chosen = request.args.get("story_chosen") == "true"
@@ -25,6 +27,7 @@ def get_prompts(selected_story):
 
     prompts = re.findall(r"{(.*?)}", template)
 
+    # should return story-chosen to hide story section and dynamically allow for form to be rendered based on story choice
     return render_template(
         "home.html",
         selected_story=selected_story,
@@ -33,6 +36,7 @@ def get_prompts(selected_story):
     )
 
 
+# receive request from the submitted form and instantialize a story
 @app.route("/story/<selected_story>", methods=["POST"])
 def generate_story(selected_story):
     file_path = os.path.join("data", f"{selected_story}.txt")
@@ -45,7 +49,10 @@ def generate_story(selected_story):
 
     completed_story = new_story.generate(prompts)
 
-    return render_template("story_result.html", story=completed_story)
+    # return dynamically loaded completed story and the selected story to help with background rendering
+    return render_template(
+        "story_result.html", story=completed_story, selected_story=selected_story
+    )
 
 
 if __name__ == "__main__":

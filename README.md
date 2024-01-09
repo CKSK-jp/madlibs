@@ -29,7 +29,12 @@ Make a “requirements.txt” file in this directory with a listing of all the s
 (env) $pip3 freeze > requirements.txt
 ```
 
-Run tests using:
-```
-python3 -m unittest test.py
-```
+### **Usage Instructions **
+- Update stories inside the data folder
+- prompts are found using regex and looking for the string inside curly brackets {}
+
+
+### **Future update considerations**
+
+1. Implement additional JS to allow users to create their own madlibs
+2. clean up html and improve css

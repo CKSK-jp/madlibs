@@ -2,17 +2,41 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #0b1416;
-  margin: 0;
 }
 
-h1, h2, label, p {
+h1,
+h2,
+label,
+p {
   color: white;
 }
 
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+label, p, input {
+  font-size: x-large;
+  padding: 2px;
+}
+
 div {
+  font-size: x-large;
   font-weight: bold;
-  font-size: large;
+}
+
+button {
+  background-color:#1a282d;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: x-large;
+  color: white;
+  padding: 5px 10px
 }
 
 body {
@@ -25,13 +49,14 @@ section {
   justify-content: center;
   flex-direction: column;
   background-color: black;
-  padding-bottom: 20px;
+  padding-bottom: 3rem;
+  height: 80%;
 }
 
 #story-selector {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 3rem;
 }
 
 .grid-item {
@@ -39,45 +64,48 @@ section {
   color: #fff;
   text-align: center;
   cursor: pointer;
-  padding: 10px;
-  width: 300px;
-  height: 150px;
-  border-radius: 5px;
+  padding-top: 40px;
+  width: 40vw;
+  height: 30vh;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .grid-item {
+    max-height: 300px !important;
+  }
 }
 
 .grid-item:hover {
-  box-shadow: 0 0 10px rgb(231, 250, 106)
+  box-shadow: 0 0 20px rgb(244, 240, 8)
 }
 
 #city-story {
   background-image: url('/static/images/city-story.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-}
-#city-story {
-  background-image: url('/static/images/city-story.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#road-story {
-  background-image: url('/static/images/road-story.jpg');
+#roadtrip-story {
+  background-image: url('/static/images/roadtrip-story.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom
+  background-position: center bottom
 }
 
 #food-story {
   background-image: url('/static/images/food-story.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
 }
 
 #park-story {
   background-image: url('/static/images/park-story.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center
 }
 
 #set-up {
@@ -85,4 +113,23 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.story-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: black;
+  width: 60%;
+  padding: 20px;
+  border-radius: 2rem;
 }

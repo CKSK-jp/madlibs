@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/static/styles.css">
 </head>
 
 <body>
-  <section id="story-container">
-    <h3>Your Special Story</h3>
-    <p id="story-block">{{story}}</p>
+  <section class="story-container" id="{{selected_story}}-story">
+    <div id="story">
+      <h2>Your Special Story</h2>
+      <p id="story-block">{{story}}</p>
+    </div>
   </section>
 </body>
 

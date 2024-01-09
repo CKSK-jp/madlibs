@@ -1,1 +1,1 @@
-At the theme park, I couldn't wait to ride the {adjective_1} roller coaster. The line was [length] and filled with excited {noun_plural}. When the ride started, I felt a rush of {emotion} as we zoomed through twists and turns. It was a(n) {adjective_2} day at the theme park!
+At the theme park, I couldn't wait to ride the {adjective_1} roller coaster. The line was {length} and filled with excited {noun_plural}. When the ride started, I felt a rush of {emotion} as we zoomed through twists and turns. It was a(n) {adjective_2} day at the theme park!

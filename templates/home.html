@@ -20,14 +20,14 @@
       <div class="grid-item" id="city-story" onclick="selectStory('city')">CITY</div>
       <div class="grid-item" id="park-story" onclick="selectStory('park')">THEME PARK</div>
       <div class="grid-item" id="food-story" onclick="selectStory('food')">FOOD</div>
-      <div class="grid-item" id="road-story" onclick="selectStory('roadtrip')">ROADTRIP</div>
+      <div class="grid-item" id="roadtrip-story" onclick="selectStory('roadtrip')">ROADTRIP</div>
     </div>
   </section>
 
   <form action="/story/{{ selected_story }}" method="post" id="set-up" {% if not story_chosen or not selected_story %}style='display: none;'{% endif %}>
     {% for prompt in prompts %}
       <label for="{{prompt}}">{{prompt}}:</label>
-      <input type="text" name="{{prompt}}">
+      <input type="text" name="{{prompt}}" required>
       <br>
     {% endfor %}
     <button type="submit">Generate Story</button>
